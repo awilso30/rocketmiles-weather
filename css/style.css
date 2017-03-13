@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'ArialRoundedMTBold';
+    src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.eot') format('opentype');
+    src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ArialRoundedMTBold', sans-serif;
+}
+
+html, body {
+    background: #2B2D36;
+}
+
+header {
+    background: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.logo {
+    padding: 40px;
+}
+
+.current-container {
+    display: flex;
+}
+
+.weather, .city {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.weather {}
+
+.city {}
+
+.forecast-container {
+    background: #2B2D36;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
+
+.forecast {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.panel {
+    border: 1px solid #D64300
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+.panel>li {
+    margin: 20px;
+    padding: 20px;
+}
+
+
+/*colors white: #FFFFFF orange: #D64300 blue: #2B2D36 gray: #979797
+sizes h1 h2 h3 h4 h5 h6*/
