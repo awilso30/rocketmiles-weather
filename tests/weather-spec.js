@@ -3,11 +3,11 @@ describe('rocketmiles.com', function() {
 // wait for browser to load, close popup and set url for each test
   beforeEach(function() {
       browser.ignoreSynchronization = true;
-      browser.get('C:/Users/XZIST/Desktop/Rocketmiles/FE/weather/index.html');
+      browser.get('https://awilso30.github.io/rocketmiles-weather/');
   });
 
   xit('should have a title', function() {
-    expect(browser.getTitle()).toEqual('Rocketmiles - Book Hotels Earn Thousands of Frequent Flyer Miles');
+    expect(browser.getTitle()).toContain('Rocketmiles');
   });
 
 });
