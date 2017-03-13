@@ -19,29 +19,31 @@
         </p>
         <p>5 Day Forecast:
             <span ng-hide='forecast'>Loading...</span>
-            <!-- THIS WORKS LOL
-            <p>
-                <span ng-show='forecast'>Day 1:</span>
-                <ul ng-show='forecast'>
-                    <li><img ng-src='{{forecast.icon}}' alt='Description' /></li>
-                    <li>Cond: {{forecast.cond}}</li>
-                    <li>Min: {{forecast.minTemp}}</li>
-                    <li>Max: {{forecast.maxTemp}}</li>
-                </ul>
-            </p>
-            -->
-            <!-- THIS ALSO WORKS
-            <div ng-show='forecast'>
-                <ul>
-                    <li ng-repeat='item in daysList'>{{item}}</li>
-                </ul>
-            </div>
-            -->
-            <div ng-show='forecast'>
-                <ul>
-                    <li ng-repeat='item in daysList'>{{item}}</li>
-                </ul>
-            </div>
+
+            <!-- <table ng-show='daysList' ng-repeat="item in daysList">
+                <tr>
+                    <td>
+                        <h4 class="item title">id: {{ item.dt }}</h4>
+                    </td>
+                </tr>
+                <tr ng-repeat="weather in item.weather">
+                    <td>
+                        {{ weather.main }}
+                    </td>
+                </tr>
+            </table> -->
+
+            <table ng-show='daysList' ng-repeat="item in daysList">
+                <tr>
+                    <td>
+                        <h4 class="item title">id: {{ item.dt }}</h4>
+                    </td>
+                </tr>
+                <tr ng-repeat="weather in item.weather">
+                    <td>
+                        {{ weather.main }}
+                    </td>
+                </tr>
 
     </div>
 

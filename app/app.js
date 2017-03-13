@@ -46,31 +46,26 @@ angular.module('app', [])
         };
 
         function getForecast() {
-            $http.get('http://api.openweathermap.org/data/2.5/forecast?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=5&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
+            $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=5&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
                     console.log('Success!');
 
-                    // days array - to ngrepeat
+                    // vm.forecast = {};
                     //
-                    // day1
+                    // vm.forecast.cond = response.list[0].weather[0].main;
+                    // vm.forecast.minTemp = response.list[0].main.temp_min;
+                    // vm.forecast.maxTemp = response.list[0].main.temp_max;
+                    //
+                    // var iconCode = response.list[0].weather[0].icon;
+                    // var url = 'http://openweathermap.org/img/w/' + iconCode + '.png';
+                    // vm.forecast.icon = url;
 
-                    vm.forecast = {};
 
-                    vm.forecast.cond = response.list[0].weather[0].main;
-                    vm.forecast.minTemp = response.list[0].main.temp_min;
-                    vm.forecast.maxTemp = response.list[0].main.temp_max;
-
-                    var iconCode = response.list[0].weather[0].icon;
-                    var url = 'http://openweathermap.org/img/w/' + iconCode + '.png';
-
-                    vm.forecast.icon = url;
 
                     // response.list = array of day objects
                     //
                     // for each day in array - create panel
-
                     vm.daysList = response.list;
- 
                 })
                 .catch(function() {
                     console.log('Unable to load weather forecast data!');

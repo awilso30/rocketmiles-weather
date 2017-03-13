@@ -1,0 +1,2 @@
+http://api.openweathermap.org/data/2.5/forecast?lat=41.92&lon=-87.6&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6
+https://.openweathermap.org/data/2.5/forecast/daily?lat=41.92&lon=-87.6&cnt=5&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6
