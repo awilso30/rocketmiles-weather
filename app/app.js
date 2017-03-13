@@ -69,7 +69,7 @@ angular.module('app', [])
         };
 
         function getCurrentWeather() {
-            $http.get('http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
+            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
                     console.log('Current Weather Success!');
                     console.log(response);
@@ -79,7 +79,7 @@ angular.module('app', [])
                     vm.current.city = response.name;
                     vm.current.temp = response.main.temp;
                     vm.current.conditions = response.weather[0].main;
-                    vm.current.icon = response.weather[0].icon;                    
+                    vm.current.icon = response.weather[0].icon;
                 })
                 .catch(function() {
                     console.log('Unable to load current weather data!');
@@ -87,7 +87,7 @@ angular.module('app', [])
         };
 
         function getForecast() {
-            $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
+            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
                     console.log('Forecast Success!');
 
@@ -101,7 +101,7 @@ angular.module('app', [])
         vm.changeLocation = function() {
             var newLocation = prompt("Enter your destination, please:");
 
-            vm.url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + newLocation + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
+            vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + newLocation + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
 
             getGoogleCoords();
         };
