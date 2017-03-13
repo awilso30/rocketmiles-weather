@@ -17,33 +17,20 @@
             <span ng-show='current'>{{current.city}}</span> Weather: <span ng-hide='current'>Loading...</span>
             <span ng-show='current'>{{current.temp}} {{current.conditions}}</span>
         </p>
-        <p>5 Day Forecast:
-            <span ng-hide='forecast'>Loading...</span>
-
-            <!-- <table ng-show='daysList' ng-repeat="item in daysList">
-                <tr>
-                    <td>
-                        <h4 class="item title">id: {{ item.dt }}</h4>
-                    </td>
-                </tr>
-                <tr ng-repeat="weather in item.weather">
-                    <td>
-                        {{ weather.main }}
-                    </td>
-                </tr>
-            </table> -->
-
-            <table ng-show='daysList' ng-repeat="item in daysList">
-                <tr>
-                    <td>
-                        <h4 class="item title">id: {{ item.dt }}</h4>
-                    </td>
-                </tr>
-                <tr ng-repeat="weather in item.weather">
-                    <td>
-                        {{ weather.main }}
-                    </td>
-                </tr>
+        <p>7 Day Forecast:
+            <span ng-hide='responseList'>Loading...</span>
+            <ul>THIS STARTS ONE DAY BEFORE??
+                <ul ng-show='responseList' ng-repeat="item in responseList">
+                    Day: {{$index + 1}}
+                    <li>id: {{item.dt}}</li>
+                    <ul ng-repeat="weather in item.weather">
+                        <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /></li>
+                        <li>Cond: {{weather.main}}</li>
+                        <li>Min: {{item.temp.min}}</li>
+                        <li>Max: {{item.temp.max}}</li>
+                    </ul>
+                </ul>
+            </ul>
 
     </div>
 
