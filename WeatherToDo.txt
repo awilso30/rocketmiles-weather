@@ -1,0 +1,22 @@
+get location
+get weather + current weather
+
+display location
+
+display weather
+ng repeat through divs
+current location + 5 days
+
+one file then refactor
+inject location into app.js
+
+call a function within the service
+location.getLocation();
+
+testing getlocation
+test things we care about + end result
+dont test built in methods, etc
+
+test that we have a response,
+test trim variables are whats expected,
+test getweather is called

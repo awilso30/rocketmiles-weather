@@ -1,22 +1,20 @@
 <html ng-app="app">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rocketmiles Weather</title>
-        <link rel="stylesheet" href="lib/custombootstrap.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="lib/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="lib/site.css" media="screen" title="no title" charset="utf-8">
-    </head>
 
-    <body  ng-controller="weather">
-        <div class="location">
-            Location:
-             <span ng-hide="location">Loading...</span>
-             <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
-             <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
-        </div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketmiles Weather</title>
+</head>
 
-        <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
-        <script src="app/app.js" charset="utf-8"></script>
-    </body>
+<body ng-controller="weather">
+    <div class="location">
+        Location:
+        <span ng-hide="location">Loading...</span>
+        <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
+        <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
+    </div>
+
+    <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
+</body>
+
 </html>
