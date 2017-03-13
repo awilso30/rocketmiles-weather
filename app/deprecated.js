@@ -52,7 +52,6 @@ $(".degrees").html(truncatedImperial);
 
 var shown = 1;
 $(".changeUnits").click(function() {
-
   if (shown == 1) {
     $("#fahrenheit").css("display", "none");
     $("#celsius").css("display", "inline-block");

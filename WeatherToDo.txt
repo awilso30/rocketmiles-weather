@@ -1,5 +1,3 @@
-default for decline???
-
 change location and change units
 
 one file then refactor
