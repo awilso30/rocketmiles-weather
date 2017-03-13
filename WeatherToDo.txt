@@ -1,4 +1,16 @@
-change location and change units
+Form validation
+responsive
+take flags off logo for responsive logo
+make days wrap - force certain number of day per row
+change units - with radial buttons?
+better icons
+high and low icons
+change days to days of the week
+
+
+
+
+
 
 one file then refactor
 inject location into app.js

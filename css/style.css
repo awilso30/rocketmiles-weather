@@ -17,9 +17,13 @@ html, body {
 
 header {
     background: #FFFFFF;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+}
+
+header>li {
+    margin: 10px;
 }
 
 .logo {
@@ -27,51 +31,80 @@ header {
 }
 
 .current-container {
+    width: 80%;
+    margin: auto;
     display: flex;
 }
 
-.weather, .city {
+.currentcity-container, .currentweather-container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
     width: 50%;
-    text-align: center;
     padding: 10px;
 }
 
-.weather {}
-
-.city {}
-
-.forecast-container {
-    background: #2B2D36;
-    color: #FFFFFF;
-    padding-top: 50px;
+.currentcity-container>ul>li {
+    margin: 15px;
 }
 
-.forecast {
-    width: 70%;
-    margin: auto;
-    align-items: center;
+.currentweather-container>ul>li {
+    margin: 15px;
+}
+
+.currentcity, .currentweather {
+    font-size: 2rem;
+}
+
+.forecast-container {
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+#today {
+    font-size: .7rem;
+    margin: 10px;
 }
 
 .panel-container {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    text-align: center;
 }
 
 .panel {
-    border: 1px solid #D64300
+    border: 1px solid #D64300;
+    margin: 10px;
+    padding: 20px 30px;
 }
 
 ul {
     list-style: none;
-    text-align: center;
 }
 
 .panel>li {
-    margin: 20px;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+button {
+    font-size: .7rem;
+    padding: 5px;
+    border: 1px solid #D64300;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
 
-/*colors white: #FFFFFF orange: #D64300 blue: #2B2D36 gray: #979797
-sizes h1 h2 h3 h4 h5 h6*/
+button:hover {
+    background: #D64300;
+    color: #FFFFFF
+}
+
+.min {
+    font-size: 1.5rem;
+}
+
+.max {
+    font-size: 1.5rem;
+}

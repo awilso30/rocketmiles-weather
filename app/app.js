@@ -72,14 +72,14 @@ angular.module('app', [])
             $http.get('http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
                     console.log('Current Weather Success!');
+                    console.log(response);
 
                     vm.current = {};
 
                     vm.current.city = response.name;
                     vm.current.temp = response.main.temp;
                     vm.current.conditions = response.weather[0].main;
-
-                    console.log(vm.current.city + ' ' + vm.current.temp + ' ' + vm.current.conditions)
+                    vm.current.icon = response.weather[0].icon;                    
                 })
                 .catch(function() {
                     console.log('Unable to load current weather data!');

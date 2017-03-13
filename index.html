@@ -11,23 +11,33 @@
     <header>
         <div class='logo'><img ng-src='assets/logo.png' alt='rocketmiles weather logo' /></div>
         <div class='current-container'>
-            <div class='city'>
+            <div class='currentcity-container'>
                 <ul>
                     <li>Current City:</li>
                     <li>
-                        <span ng-hide='current'>Loading...</span>
-                        <span ng-show='current'>{{current.city}}</span>
-                        <span ng-show='current'><button ng-click='changeLocation()'>Change Location</button></span>
+                        <li>
+                            <span ng-hide='current'>Loading...</span>
+                        </li>
+                        <li>
+                            <span class='currentcity' ng-show='current'>{{current.city}}</span>
+                        </li>
+                        <li>
+                            <span ng-show='current'><button ng-click='changeLocation()'>Change City</button></span>
+                        </li>
                     </li>
                 </ul>
             </div>
-            <div class='weather'>
-                <ul>
+            <div class='currentweather-container'>
+                <ul class='currentweather-list'>
                     <li>Current Weather:</li>
                     <li>
-                        <span ng-hide='current'>Loading...</span>
-                        <span ng-show='current'>{{current.temp}} {{current.conditions}}</span>
-                        <span ng-show='coords'><button>Change Units</button></span>
+                        <li><span ng-hide='current'>Loading...</span></li>
+                        <li>
+                            <span class='currentweather' ng-show='current'>{{current.temp}}&deg;F</span>
+                        </li>
+                        <li>
+                            <img ng-show='current' ng-src='http://openweathermap.org/img/w/{{current.icon}}.png' alt='weather icon' />{{current.conditions}}
+                        </li>
                     </li>
                 </ul>
             </div>
@@ -35,26 +45,27 @@
     </header>
 
     <div class='forecast-container'>
-        <!-- THE FORECAST STARTS WITH THE CURRENT DAY -->
-        <div class="forecast">
-            <h1>7 Day Forecast:</h1>
-            <span ng-hide='forecast'>Loading...</span>
-            <ul class='panel-container'>
-                <ul ng-show='forecast' ng-repeat='item in forecast'>
-                    Day: {{$index + 1}}
-                    <ul class='panel' ng-repeat='weather in item.weather'>
-                        <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /></li>
-                        <li>Cond: {{weather.main}}</li>
-                        <li>Min: {{item.temp.min}}</li>
-                        <li>Max: {{item.temp.max}}</li>
+        <div>
+            <h2>7 Day Forecast:</h2>
+            <div id='today' ng-show='forecast'><i>Starts with today</i></div>
+            <div>
+                <!-- THE FORECAST STARTS WITH THE CURRENT DAY -->
+                <span ng-hide='forecast'>Loading...</span>
+                <ul class='panel-container'>
+                    <ul ng-show='forecast' ng-repeat='item in forecast'>
+                        Day: {{$index + 1}}
+                        <ul class='panel' ng-repeat='weather in item.weather'>
+                            <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /><br>{{weather.main}}</li>
+                            <li><span class='min'>{{item.temp.max}}&deg;F</span><br>High</li>
+                            <li><span class='max'>{{item.temp.min}}&deg;F</span><br>Low</li>
+                        </ul>
                     </ul>
                 </ul>
-            </ul>
+            </div>
         </div>
-    </div>
 
-    <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
-    <script src='app/app.js' charset='utf-8'></script>
+        <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
+        <script src='app/app.js' charset='utf-8'></script>
 </body>
 
 </html>
