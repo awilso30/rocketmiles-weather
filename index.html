@@ -19,7 +19,7 @@
         </p>
         <p>7 Day Forecast:
             <span ng-hide='responseList'>Loading...</span>
-            <ul>THIS STARTS ONE DAY BEFORE??
+            <ul>THIS STARTS WITH THE CURRENT DAY
                 <ul ng-show='responseList' ng-repeat="item in responseList">
                     Day: {{$index + 1}}
                     <li>id: {{item.dt}}</li>

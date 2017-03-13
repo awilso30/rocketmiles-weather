@@ -1,9 +1,6 @@
-display location
 default for decline???
 
-display weather
-ng repeat through divs
-current location + 5 days
+change location and change units
 
 one file then refactor
 inject location into app.js
