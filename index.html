@@ -1,20 +1,52 @@
-<html ng-app="app">
+<html ng-app='app'>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Rocketmiles Weather</title>
 </head>
 
-<body ng-controller="weather">
-    <div class="location">
-        Location:
-        <span ng-hide="location">Loading...</span>
-        <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
-        <span ng-show="location">{{location.trimLatitude}}, {{location.trimLongitude}}</span>
+<body ng-controller='weather'>
+    <div class='display'>
+        <p>Location Coords:
+            <span ng-hide='coords'>Loading...</span>
+            <span ng-show='coords'>{{coords.trimLatitude}}, {{coords.trimLongitude}}</span>
+            <span ng-show='coords'>{{coords.trimLatitude}}, {{coords.trimLongitude}}</span>
+        </p>
+        <p>Current City:
+            <span ng-hide='current'>Loading...</span>
+            <span ng-show='current'>{{current.city}}</span> Weather: <span ng-hide='current'>Loading...</span>
+            <span ng-show='current'>{{current.temp}} {{current.conditions}}</span>
+        </p>
+        <p>5 Day Forecast:
+            <span ng-hide='forecast'>Loading...</span>
+            <!-- THIS WORKS LOL
+            <p>
+                <span ng-show='forecast'>Day 1:</span>
+                <ul ng-show='forecast'>
+                    <li><img ng-src='{{forecast.icon}}' alt='Description' /></li>
+                    <li>Cond: {{forecast.cond}}</li>
+                    <li>Min: {{forecast.minTemp}}</li>
+                    <li>Max: {{forecast.maxTemp}}</li>
+                </ul>
+            </p>
+            -->
+            <!-- THIS ALSO WORKS
+            <div ng-show='forecast'>
+                <ul>
+                    <li ng-repeat='item in daysList'>{{item}}</li>
+                </ul>
+            </div>
+            -->
+            <div ng-show='forecast'>
+                <ul>
+                    <li ng-repeat='item in daysList'>{{item}}</li>
+                </ul>
+            </div>
+
     </div>
 
-    <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
-    <script src="app/app.js" charset="utf-8"></script>
+    <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
+    <script src='app/app.js' charset='utf-8'></script>
 </body>
 
 </html>

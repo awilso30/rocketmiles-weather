@@ -1,7 +1,5 @@
-get location
-get weather + current weather
-
 display location
+default for decline???
 
 display weather
 ng repeat through divs
