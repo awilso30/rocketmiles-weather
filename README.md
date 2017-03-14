@@ -44,4 +44,8 @@ Run the tests<br>
 <i>npm test</i>
 
 <b>To Do List:</b><br>
--Add form validation -Increase responsiveness -Take flags off logo and convert to text for responsive logo -Make panels wrap with media queries - force certain number of day per row -Add change units button - with radial button style -Sub out better icons (flat design) -Add high and low arrow icons -Change days to days of the week
+-Add form validation -Increase responsiveness<br>
+-Take flags off logo and convert to text for responsive logo<br>
+-Make panels wrap with media queries - force certain number of day per row<br>
+-Add change units button - with radial button style -Sub out better icons (flat design)<br> 
+-Add high and low arrow icons -Change days to days of the week
