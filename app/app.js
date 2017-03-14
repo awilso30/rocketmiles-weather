@@ -24,6 +24,7 @@ angular.module('app', [])
             navigator.geolocation.getCurrentPosition(success, error);
 
             function success(position) {
+                console.log('Geolocation Success!');
                 vm.coords.latitude = position.coords.latitude;
                 vm.coords.longitude = position.coords.longitude;
 
@@ -51,6 +52,8 @@ angular.module('app', [])
         function getCurrentWeather() {
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
+                    console.log('Current Weather Success!');
+
                     vm.current = {};
 
                     vm.current.city = response.name;
@@ -66,6 +69,8 @@ angular.module('app', [])
         function getForecast() {
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
+                    console.log('Forecast Success!');
+
                     vm.forecast = response.list;
                 })
                 .catch(function() {
@@ -74,6 +79,7 @@ angular.module('app', [])
         };
 
         vm.changeLocation = function() {
+            console.log(vm.location);
             vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + vm.location + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
 
             getGoogleCoords();
@@ -82,6 +88,7 @@ angular.module('app', [])
         function getGoogleCoords() {
             $http.get(vm.url)
                 .success(function(response) {
+                    console.log('Google Coords Success!');
 
                     vm.coords.trimLatitude = response.results[0].geometry.location.lat;
                     vm.coords.trimLongitude = response.results[0].geometry.location.lng;
