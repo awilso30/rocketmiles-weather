@@ -15,12 +15,8 @@
                 <ul>
                     <li>Current City:</li>
                     <li>
-                        <li>
-                            <span ng-hide='current'>Loading...</span>
-                        </li>
-                        <li>
-                            <span class='currentcity' ng-show='current'>{{current.city}}</span>
-                        </li>
+                        <li><span ng-hide='current'>Loading...</span></li>
+                        <li><span class='currentcity' ng-show='current'>{{current.city}}</span></li>
                         <li>
                             <span ng-show='current'><button ng-click='changeLocation(); showme=true'>Change City</button></span>
                             <input ng-show='showme' ng-model='location'></input>
@@ -52,7 +48,6 @@
             <span ng-hide='forecast'>Loading...</span>
             <div id='today' ng-show='forecast'><i>Starts with today</i></div>
             <div>
-                <!-- THE FORECAST STARTS WITH THE CURRENT DAY -->
                 <ul class='panel-container'>
                     <ul ng-show='forecast' ng-repeat='item in forecast'>
                         Day: {{$index + 1}}
