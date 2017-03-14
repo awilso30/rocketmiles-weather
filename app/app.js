@@ -1,7 +1,7 @@
 angular.module('app', [])
     .controller('weather', ['$scope','$http', function($scope,$http) {
         var vm = $scope;
-        vm.location = 'chicago';
+        vm.location = 'Chicago';
 
         init();
 
@@ -53,7 +53,6 @@ angular.module('app', [])
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
                 .success(function(response) {
                     console.log('Current Weather Success!');
-                    console.log(response);
 
                     vm.current = {};
 
@@ -80,6 +79,7 @@ angular.module('app', [])
         };
 
         vm.changeLocation = function() {
+            console.log(vm.location);
             vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + vm.location + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
 
             getGoogleCoords();

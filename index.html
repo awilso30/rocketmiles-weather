@@ -22,9 +22,9 @@
                             <span class='currentcity' ng-show='current'>{{current.city}}</span>
                         </li>
                         <li>
-                            <span ng-show='current'><button ng-click='changeLocation()'>Change City</button></span>
-                            <input ng-show='current' ng-model='vm.location' ng-click='vm.changeLocation()'></input>
-                            {{vm.location}}
+                            <span ng-show='current'><button ng-click='changeLocation(); showme=true'>Change City</button></span>
+                            <input ng-show='showme' ng-model='location'></input>
+                            <button ng-show='showme' ng-click='changeLocation(); showme=false'>Submit</button>
                         </li>
                     </li>
                 </ul>
@@ -49,10 +49,10 @@
     <div class='forecast-container'>
         <div>
             <h2>7 Day Forecast:</h2>
+            <span ng-hide='forecast'>Loading...</span>
             <div id='today' ng-show='forecast'><i>Starts with today</i></div>
             <div>
                 <!-- THE FORECAST STARTS WITH THE CURRENT DAY -->
-                <span ng-hide='forecast'>Loading...</span>
                 <ul class='panel-container'>
                     <ul ng-show='forecast' ng-repeat='item in forecast'>
                         Day: {{$index + 1}}
