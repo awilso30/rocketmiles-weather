@@ -1,26 +1,7 @@
 angular.module('app', [])
     .controller('weather', ['$scope','$http', function($scope,$http) {
         var vm = $scope;
-
-        // DAY TITLES
-        // getdate, day1 = today
-        // add 1 to each day
-        // add to Array
-        // ng repeat day titles
-
-        // USE THIS IF CHANGE UNITS
-        // var inputs = document.getElementsByTagName('input');
-        //
-        // for (var i = 0, len = inputs.length; i < len; i++) {
-        //   input = inputs[i];
-        //   input.onmouseover = function() {
-        //     this.setAttribute('data-orig-image', this.getAttribute('src'));
-        //     this.src = this.getAttribute('data-alt-image');
-        //   };
-        //   input.onmouseout = function() {
-        //     this.src = this.getAttribute('data-orig-image');
-        //   };
-        // };
+        vm.location = 'chicago';
 
         init();
 
@@ -99,9 +80,7 @@ angular.module('app', [])
         };
 
         vm.changeLocation = function() {
-            var newLocation = prompt("Enter your destination, please:");
-
-            vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + newLocation + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
+            vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + vm.location + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
 
             getGoogleCoords();
         };

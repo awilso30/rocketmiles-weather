@@ -44,11 +44,7 @@ header>li {
     padding: 10px;
 }
 
-.currentcity-container>ul>li {
-    margin: 15px;
-}
-
-.currentweather-container>ul>li {
+.currentcity-container>ul>li, .currentweather-container>ul>li {
     margin: 15px;
 }
 
@@ -79,13 +75,23 @@ header>li {
     padding: 20px 30px;
 }
 
-ul {
-    list-style: none;
-}
-
 .panel>li {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.min {
+    font-size: 1.5rem;
+}
+
+.max {
+    font-size: 1.5rem;
+}
+
+input {}
+
+ul {
+    list-style: none;
 }
 
 button {
@@ -99,12 +105,4 @@ button {
 button:hover {
     background: #D64300;
     color: #FFFFFF
-}
-
-.min {
-    font-size: 1.5rem;
-}
-
-.max {
-    font-size: 1.5rem;
 }

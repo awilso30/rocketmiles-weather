@@ -1,12 +1,17 @@
 // start tests
-describe('rocketmiles.com', function() {
-// wait for browser to load, close popup and set url for each test
+describe('Rocketmiles Weather', function() {
+// set url for each test, wait for browser to load
   beforeEach(function() {
-      browser.ignoreSynchronization = true;
+      browser.ignoreSynchronization = false;
       browser.get('https://awilso30.github.io/rocketmiles-weather/');
+      browser.driver.sleep(2000);
   });
 
-  xit('should have a title', function() {
+  it('should have a title', function() {
+    expect(browser.getTitle()).toContain('Rocketmiles');
+  });
+
+  it('should have a title', function() {
     expect(browser.getTitle()).toContain('Rocketmiles');
   });
 
