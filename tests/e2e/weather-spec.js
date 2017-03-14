@@ -17,32 +17,32 @@ describe('Rocketmiles Weather', function() {
       browser.driver.sleep(10000);
   });
 
-  it('should have a title', function() {
+  xit('should have a title', function() {
     expect(browser.getTitle()).toContain('Rocketmiles');
   });
 
-  it('should have a current city', function() {
+  xit('should have a current city', function() {
     expect(currentCity.isPresent()).toBe(true);
     expect(currentCity.isDisplayed()).toBe(true);
   });
 
-  it('should have a current weather', function() {
+  xit('should have a current weather', function() {
     expect(currenWeather.isPresent()).toBe(true);
     expect(currenWeather.isDisplayed()).toBe(true);
   });
 
-  it('should have a 7 day forecast', function() {
+  xit('should have a 7 day forecast', function() {
     expect(forecast.isPresent()).toBe(true);
     expect(forecast.isDisplayed()).toBe(true);
   });
 
-  it('should have 7 panels of forecast data', function() {
+  xit('should have 7 panels of forecast data', function() {
         panels.then(function(result){
         expect(result.length).toEqual(7);
     });
   });
 
-  it('should accept a new city (Miami) and display corresponding weather information', function() {
+  xit('should accept a new city (Miami) and display corresponding weather information', function() {
     changeCity.click();
     browser.driver.sleep(2000);
     input.click();
@@ -60,7 +60,7 @@ describe('Rocketmiles Weather', function() {
     });
   });
 
-  it('should accept a new city (Vancouver) and display corresponding weather information', function() {
+  xit('should accept a new city (Vancouver) and display corresponding weather information', function() {
     changeCity.click();
     browser.driver.sleep(2000);
     input.click();
