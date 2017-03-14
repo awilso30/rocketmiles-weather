@@ -8,7 +8,7 @@
 
 <body ng-controller='weather'>
 
-    <header>
+    <headers>
         <div class='logo'><img ng-src='assets/logo.png' alt='rocketmiles weather logo' /></div>
         <div class='current-container'>
             <div class='currentcity-container'>
@@ -40,29 +40,29 @@
                 </ul>
             </div>
         </div>
-    </header>
+        </header>
 
-    <div class='forecast-container'>
-        <div>
-            <h2>7 Day Forecast:</h2>
-            <span ng-hide='forecast'>Loading...</span>
-            <div id='today' ng-show='forecast'><i>Starts with today</i></div>
+        <div class='forecast-container'>
             <div>
-                <ul class='panel-container'>
-                    <ul ng-show='forecast' ng-repeat='item in forecast'>
-                        Day: {{$index + 1}}
-                        <ul class='panel' ng-repeat='weather in item.weather'>
-                            <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /><br>{{weather.main}}</li>
-                            <li><span class='min'>{{item.temp.max}}&deg;F</span><br>High</li>
-                            <li><span class='max'>{{item.temp.min}}&deg;F</span><br>Low</li>
+                <h2>7 Day Forecast:</h2>
+                <span ng-hide='forecast'>Loading...</span>
+                <div id='today' ng-show='forecast'><i>Starts with today</i></div>
+                <div>
+                    <ul class='panel-container'>
+                        <ul ng-show='forecast' ng-repeat='item in forecast'>
+                            Day: {{$index + 1}}
+                            <ul class='panel' ng-repeat='weather in item.weather'>
+                                <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /><br>{{weather.main}}</li>
+                                <li><span class='min'>{{item.temp.max}}&deg;F</span><br>High</li>
+                                <li><span class='max'>{{item.temp.min}}&deg;F</span><br>Low</li>
+                            </ul>
                         </ul>
                     </ul>
-                </ul>
+                </div>
             </div>
-        </div>
 
-        <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
-        <script src='app/app.js' charset='utf-8'></script>
+            <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
+            <script src='app/app.js' charset='utf-8'></script>
 </body>
 
 </html>
