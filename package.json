@@ -7,7 +7,7 @@
         "test": "tests"
     },
     "dependencies": {
-        "angular": "^1.6.3",
+        "angular": "1.5.3",
         "jasmine": "^2.5.3",
         "protractor": "^5.1.1"
     },

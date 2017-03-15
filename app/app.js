@@ -1,9 +1,10 @@
 angular.module('app', [])
-    .controller('weather', ['$scope','$http', function($scope,$http) {
+    .controller('weather', ['$scope','$http', '$window', function($scope, $http, $window) {
         var vm = $scope;
         vm.location = 'Chicago';
         vm.OWKEY = 'APPID=4b3ff62e3ed31d05cb44a014d891b7e6'
         vm.GKEY = '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg'
+        vm.coords = {};
 
         init();
 
@@ -12,38 +13,38 @@ angular.module('app', [])
         };
 
         function geolocationCheck() {
-            if ("geolocation" in navigator) {
+
+            if (confirm == true) {
               getLocation();
             } else {
-              console.log('Your browser doesn\'t support geolocation');
+              defaultLocation();
             }
-        }
+        };
 
         function getLocation() {
-            vm.coords = {};
-            var position;
+            $http.get('http://ip-api.com/json')
+                .then(function(success) {
+                    vm.coords.latitude = success.data.lat;
+                    vm.coords.longitude = success.data.lon;
 
-            navigator.geolocation.getCurrentPosition(success, error);
+                    vm.coords.trimLatitude = vm.coords.latitude.toString().substring(0, 5);
+                    vm.coords.trimLongitude = vm.coords.longitude.toString().substring(0, 5);
 
-            function success(position) {
+                    convertCoords();
+                    getCurrentWeather();
+                    getForecast();
+                })
+                .catch(function(error) {
+                    console.log('Can\'t obtain location information!');
+                })
+        };
 
-                vm.coords.latitude = position.coords.latitude;
-                vm.coords.longitude = position.coords.longitude;
+        function defaultLocation() {
+            vm.coords.trimLatitude = 41.88;
+            vm.coords.trimLongitude = -87.64;
 
-                convertCoords();
-                getCurrentWeather();
-                getForecast();
-            };
-
-            function error (msg) {
-                console.log('Can\'t obtain location information.. loading default!');
-
-                vm.coords.trimLatitude = 41.88;
-                vm.coords.trimLongitude = -87.64;
-
-                getCurrentWeather();
-                getForecast();
-            };
+            getCurrentWeather();
+            getForecast();
         };
 
         function convertCoords() {
