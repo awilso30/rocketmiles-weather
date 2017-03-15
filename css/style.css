@@ -4,7 +4,7 @@
     src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.ttf') format('truetype');
 }
 
-* {
+html, body {
     margin: 0;
     padding: 0;
 }
