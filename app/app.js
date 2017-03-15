@@ -13,7 +13,7 @@ angular.module('app', [])
         };
 
         function geolocationCheck() {
-
+          var confirm=$window.confirm('Would you like this website to use your location data?');
             if (confirm == true) {
               getLocation();
             } else {
@@ -55,7 +55,6 @@ angular.module('app', [])
         function getCurrentWeather() {
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&' + vm.OWKEY)
                 .success(function(response) {
-
                     vm.current = {};
 
                     vm.current.city = response.name;
@@ -71,7 +70,6 @@ angular.module('app', [])
         function getForecast() {
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&' + vm.OWKEY)
                 .success(function(response) {
-
                     vm.forecast = response.list;
 
                     createPanel();
