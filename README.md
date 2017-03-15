@@ -14,7 +14,7 @@ Open index.html in the browser of your choice
 
 Be sure to disable any adblock or popup blockers as the location api requires this in order to get your location.
 
-<b>Tests</b>
+<b>Tests</b><br>
 Tests are deprecated after finding a bug late last night.
 
 <b>To Do List:</b><br>
