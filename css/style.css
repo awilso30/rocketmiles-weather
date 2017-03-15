@@ -11,7 +11,7 @@
     font-family: 'ArialRoundedMTBold', sans-serif;
 }
 
-html, body {
+body {
     background: #2B2D36;
 }
 
@@ -88,8 +88,8 @@ header>li {
     font-size: 1.5rem;
 }
 
-.errors-container {
-    padding: 10px;
+ul {
+    list-style: none;
 }
 
 input {
@@ -97,10 +97,6 @@ input {
     border-radius: 5px;
     height: 25px;
     width: 80px;
-}
-
-ul {
-    list-style: none;
 }
 
 button {
