@@ -5,10 +5,6 @@ Small web app to present the current weather and a 7 day forecast. If user share
 First, I noted all expected output and functionality. Then, I brainstormed ideas on app layout and sketched out ideas. I thought about possible issues, problems and how to work around them. Redesigned and redid sketches. Thought about all the tools that would be absolutely necessary. I resolved to use as few tools as possible and build everything from scratch to maximize load time, performance and cut unnecessary bloat.
 
 <b>How to run:</b><br>
-npm install and open index.html
-
-or
-
 Navigate to https://awilso30.github.io/rocketmiles-weather/
 
 <b>How To run tests:</b><br>
