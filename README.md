@@ -5,7 +5,16 @@ Small web app to present the current weather and a 7 day forecast. If user share
 First, I noted all expected output and functionality. Then, I brainstormed ideas on app layout and sketched out ideas. I thought about possible issues, problems and how to work around them. Redesigned and redid sketches. Thought about all the tools that would be absolutely necessary. I resolved to use as few tools as possible and build everything from scratch to maximize load time, performance and cut unnecessary bloat.
 
 <b>How to run:</b><br>
-Navigate to https://awilso30.github.io/rocketmiles-weather/
+Clone this repo
+
+Cmdline
+<i>npm install</i>
+
+Open index.html in the browser of your choice
+
+Disable any adblock or popup blockers
+
+Alternatively you may navigate to: https://awilso30.github.io/rocketmiles-weather/
 
 <b>How To run tests:</b><br>
 Tests are located in the tests folder.<br>
@@ -24,7 +33,7 @@ Tests are located in the tests folder.<br>
 -Clone or download this repo to the directory of your choice.<br>
 
 <b>To Setup:</b><br>
--Open a cmdline<br>
+-Cmdline<br>
 -Navigate to where you cloned this repo
 
 Install all dependencies required for the tests<br>
@@ -36,7 +45,7 @@ Check and mark what tests you'd like to run in rocketmiles-spec.js
 Start the test server<br>
 <i>npm start</i>
 
--Open a new cmdline<br>
+-New cmdline<br>
 -Navigate to where you cloned this repo
 
 Run the tests<br>
