@@ -1,0 +1,261 @@
+Specifics to improve on weather app app.js -----------------------------------------------------------------
+
+create a unix converter function and call it after api call, before displaying data
+
+To convert days to real dates use unix converter on “dt” under list key
+
+https://www.epochconverter.com/
+
+ 
+
+How:
+
+getForecast = ... {
+
+                daysArray = forEach (response.days).push(response.day)
+
+ 
+
+                convertDays(daysArray);
+
+}
+
+ 
+
+function convertDays(daysArray) {
+
+                convertedDaysArray = []
+
+               
+
+                convertedDaysArray = foreach(daysArray) {
+
+                                convert UTC to human days
+
+                                convertedDaysArray.push(convertedDay)
+
+                }
+
+}
+
+ 
+
+From https://github.com/egekhter/rocketmiles-weather
+
+Could possibly work?
+
+Where data is response from forecast
+
+for (var i = 1; i < length; i++) {
+
+forecast.push({
+
+date: new Date(data.data.list[i].dt * 1000).toString().split(' ')[0],
+
+F: {
+
+high: Math.round(data.data.list[i].temp.max),
+
+low: Math.round(data.data.list[i].temp.min)
+
+},
+
+C: {
+
+high: Math.round((data.data.list[i].temp.max - 32) * (5 / 9)),
+
+low: Math.round((data.data.list[i].temp.min - 32) * (5 / 9))
+
+}
+
+});
+
+}
+
+ 
+
+https://github.com/WillStockman13/rocketMiles/blob/master/Client/weather/weather.js
+
+Possible for new icons
+
+for(var i = 0; i < resp.data.length; i++) {
+
+if(resp.data[i].icon.indexOf('rain') >= 0) {
+
+resp.data[i].pic = '../assets/rain.jpeg';
+
+}
+
+if(resp.data[i].icon.indexOf('snow') >= 0) {
+
+resp.data[i].pic = '../assets/snowflake.ico';
+
+}
+
+if(resp.data[i].icon.indexOf('sun') >= 0 || resp.data[i].icon.indexOf('clear-day') >= 0) {
+
+resp.data[i].pic = '../assets/sun.jpg';
+
+}
+
+if(resp.data[i].icon.indexOf('cloud') >= 0) {
+
+resp.data[i].pic = '../assets/cloud.png';
+
+}
+
+}
+
+ 
+
+remove single call and just call function for both location "shared" and "newlocation"
+
+aka reduce/remove "get current weather" and use only "get forecast", but pull out the first day as today? --- only possible if the forecast api calls the current time as the first json response
+
+ 
+
+remove string conversion from the geolocation success into its own function which is called?
+
+ 
+
+convert all console.logs into information given to the user
+
+ 
+
+take out variables from forecast json response like the current weather response?
+
+ 
+
+iffe's or other modules for all functions? Split into other controllers (or directives?)
+
+define variables in their own function? (seems super redundant and part of JS... not going to test that it can declare a variable or array)
+
+ 
+
+How picky to get?
+
+ 
+
+Promises on api call
+
+ 
+
+Functions into a diff controller?
+
+ 
+
+ 
+
+Specifics to improve on weather app index.html -----------------------------------------------------------
+
+remove currentweater-list?
+
+clean up forecast divs?? missing closing div tag
+
+remove "forecast starts with today"
+
+figure out how to ng-repeat AND convert at the same time
+
+<span ng-repeat='item in convertedDaysArray'>{{item}}</span>
+
+ 
+
+ 
+
+ 
+
+CSS----------------------------------------------------------------------------------------------------------------------
+
+Body color, not body and html
+
+ 
+
+ 
+
+ 
+
+Other to do’s for app-----------------------------------------------------------------------------------------------
+
+run only one call since forecast pulls todays data
+
+Unit tests
+
+Componentization
+
+clean up code/html
+
+improve class names with BEM
+
+days - unix timestamp conversion
+
+visuals
+
+responsiveness
+
+npm/host
+
+support for all browsers
+
+loading optimization
+
+api key to variable?
+
+ 
+
+ 
+
+ 
+
+Things to look into overall--------------------------------------------------------------------------------------
+
+tree shaking, aot - ahead of time compilation
+
+rollup.js
+
+components
+
+webpack/host
+
+lighthouse cli load tools
+
+http2
+
+css blocking and splitting style sheets
+
+css at bottom of body and inline css
+
+reduce dom nodes
+
+sourcemap explorer
+
+ 
+
+ 
+
+ 
+
+Ways to cut budget-----------------------------------------------------------------------------------------------
+
+food - 6000   -   3600 - 3200
+
+rent - 7800
+
+loans - 7800
+
+ 
+
+tv/cell/internet/subs
+
+65+65+10
+
+35+65
+
+1200
+
+ 
+
+bars
+
+ 
+
+eating out
