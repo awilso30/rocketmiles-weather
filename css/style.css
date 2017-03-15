@@ -44,7 +44,7 @@ header>li {
     padding: 10px;
 }
 
-.currentcity-container>ul>li, .currentweather-container>ul>li {
+.currentcity-container>ul>li, .currentweather-container>ul>li, {
     margin: 15px;
 }
 
@@ -86,6 +86,10 @@ header>li {
 
 .max {
     font-size: 1.5rem;
+}
+
+.errors-container {
+    padding: 10px;
 }
 
 input {

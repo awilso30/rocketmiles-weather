@@ -24,7 +24,7 @@
                         <li>
                             <span ng-show='current'><button ng-click='changeLocation(); showme=true'>Change City</button></span>
                             <input ng-show='showme' ng-model='location'></input>
-                            <button ng-show='showme' ng-click='changeLocation(); showme=false'>Submit</button>
+                            <button ng-show='showme' ng-click='changeLocation(); showme=false; error=null'>Submit</button>
                         </li>
                     </li>
                 </ul>
