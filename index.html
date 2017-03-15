@@ -19,10 +19,8 @@
                 <ul>
                     <li>Current City:</li>
                     <li>
-                        <li><span ng-hide='current'>Loading...</span>
-                        </li>
-                        <li><span class='currentcity' ng-show='current'>{{current.city}}</span>
-                        </li>
+                        <li><span ng-hide='current'>Loading...</span></li>
+                        <li><span class='currentcity' ng-show='current'>{{current.city}}</span></li>
                         <li>
                             <span ng-show='current'><button ng-click='changeLocation(); showme=true'>Change City</button></span>
                             <input ng-show='showme' ng-model='location'></input>
@@ -40,7 +38,9 @@
                             <span class='currentweather' ng-show='current'>{{current.temp}}&deg;F</span>
                         </li>
                         <li>
-                            <img ng-show='current' ng-src='http://openweathermap.org/img/w/{{current.icon}}.png' alt='weather icon' />{{current.conditions}}
+                            <div class='currentconditions'>
+                                <img ng-show='current' ng-src='http://openweathermap.org/img/w/{{current.icon}}.png' alt='weather icon' /> {{current.conditions}}
+                            </div>
                         </li>
                     </li>
                 </ul>

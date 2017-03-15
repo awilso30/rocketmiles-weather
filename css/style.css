@@ -33,7 +33,6 @@ header>li {
     color: #2B2D36;
     font-size: 60px;
     letter-spacing: 4.5px;
-    line-height: -1.5;
     text-transform: uppercase;
 }
 
@@ -50,9 +49,9 @@ img {
 .currentcity-container, .currentweather-container {
     display: flex;
     justify-content: center;
-    text-align: left;
     width: 50%;
     padding: 10px;
+    text-align: center;
 }
 
 .currentcity-container>ul>li, .currentweather-container>ul>li {
@@ -61,6 +60,11 @@ img {
 
 .currentcity, .currentweather {
     font-size: 2rem;
+}
+
+.currentconditions {
+    display: flex;
+    align-items: center;
 }
 
 .forecast-container {
