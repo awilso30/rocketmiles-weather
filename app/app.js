@@ -28,12 +28,7 @@ angular.module('app', [])
                 vm.coords.latitude = position.coords.latitude;
                 vm.coords.longitude = position.coords.longitude;
 
-                var latitudeString = vm.coords.latitude.toString();
-                var longitudeString = vm.coords.longitude.toString();
-
-                vm.coords.trimLatitude = latitudeString.substring(0, 5);
-                vm.coords.trimLongitude = longitudeString.substring(0, 5);
-
+                convertCoords();
                 getCurrentWeather();
                 getForecast();
             };
@@ -47,6 +42,11 @@ angular.module('app', [])
                 getCurrentWeather();
                 getForecast();
             };
+        };
+
+        function convertCoords() {
+            vm.coords.trimLatitude = vm.coords.latitude.toString().substring(0, 5);
+            vm.coords.trimLongitude = vm.coords.longitude.toString().substring(0, 5);
         };
 
         function getCurrentWeather() {
