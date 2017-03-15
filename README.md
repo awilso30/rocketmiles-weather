@@ -34,15 +34,6 @@ Tests are located in the tests folder.<br>
 Install all dependencies required for the tests<br>
 <i>npm install</i>
 
-<b>Set Firefox permissions:</b><br>
-Because the app asks for your location upon load, we could choose to ignore this and load the default location every run or we can setup a workaround through firefox profiles. The tests should work either way, but if you'd like the work around please follow below. If the below doesn't work, you may have to manually click the "Share Location" prompt, which is why I've included lengthy browser.waits to the beforeEach function.
-
-Fix firefox permissions<br>
--Navigate to the site: https://awilso30.github.io/rocketmiles-weather/<br>
--Go to the Tools menu in the top taskbar, then select Page Info<br>
--Select the Permissions tab<br>
--Change the setting for Share Location to allowed
-
 <b>To Run:</b><br>
 Check and mark what tests you'd like to run in rocketmiles-spec.js
 
@@ -55,6 +46,15 @@ Start the test server<br>
 Run the tests<br>
 <i>npm test</i>
 
+<b>Set Firefox permissions:</b><br>
+Because the app asks for your location upon load, we could choose to ignore this and load the default location every run or we can setup a workaround through firefox profiles. The tests should work either way, but if you'd like the work around please follow below. If the below doesn't work, you may have to manually click the "Share Location" prompt, which is why I've included lengthy browser.waits to the beforeEach function.
+
+Fix firefox permissions<br>
+-Navigate to the site: https://awilso30.github.io/rocketmiles-weather/<br>
+-Go to the Tools menu in the top taskbar, then select Page Info<br>
+-Select the Permissions tab<br>
+-Change the setting for Share Location to allowed
+
 <b>To Do List:</b><br>
 -Add form validation<br>
 -Increase responsiveness<br>
@@ -63,4 +63,3 @@ Run the tests<br>
 -Add change units button - with radial button style<br>
 -Sub out better icons (flat design)<br>
 -Add high and low arrow icons<br>
--Change days to days of the week
