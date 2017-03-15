@@ -67,4 +67,5 @@ Fix firefox permissions<br>
 -Sub out better icons (flat design)<br>
 -Add high and low arrow icons<br>
 -Attempt to use geolocator again(was giving me issues)<br>
--Host with express or some other server
+-Host with Express or some other server<br>
+-Get rid of screen flashing/loading issues on Firefox
