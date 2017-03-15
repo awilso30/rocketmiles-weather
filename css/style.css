@@ -4,6 +4,11 @@
     src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.ttf') format('truetype');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #2B2D36;
     font-family: 'ArialRoundedMTBold', sans-serif;
@@ -29,6 +34,7 @@ header>li {
     font-size: 60px;
     letter-spacing: 4.5px;
     line-height: -1.5;
+    text-transform: uppercase;
 }
 
 img {
@@ -115,4 +121,16 @@ button {
 button:hover {
     background: #D64300;
     color: #FFFFFF
+}
+
+@media (max-width: 1020px) {
+    .flag img {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .panel-container {
+        flex-wrap: wrap;
+    }
 }

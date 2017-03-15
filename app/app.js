@@ -83,7 +83,7 @@ angular.module('app', [])
         function createPanel() {
             vm.convertedArray = [];
 
-            for (var i = 0; i < vm.forecast.length; i++) {
+            for (var i = 1; i < vm.forecast.length; i++) {
                 vm.convertedArray.push({
                     date: new Date(vm.forecast[i].dt * 1000).toString().split(' ')[0],
                     icon: vm.forecast[i].weather[0].icon,
