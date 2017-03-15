@@ -12,9 +12,7 @@ Cmdline
 
 Open index.html in the browser of your choice
 
-Disable any adblock or popup blockers
-
-Alternatively you may navigate to: https://awilso30.github.io/rocketmiles-weather/
+Be sure to disable any adblock or popup blockers as the location api requires this in order to get your location.
 
 <b>How To run tests:</b><br>
 Tests are located in the tests folder.<br>
