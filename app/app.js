@@ -71,7 +71,37 @@ angular.module('app', [])
             $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&' + vm.OWKEY)
                 .success(function(response) {
 
+                    vm.convertedArray = [];
+
                     vm.forecast = response.list;
+
+                    for (var i = 0; i < vm.forecast.length; i++) {
+
+                        vm.convertedArray.push({
+                            date: new Date(vm.forecast[i].dt * 1000).toString().split(' ')[0],
+                            icon: vm.forecast[i].weather[0].icon,
+                            conds: vm.forecast[i].weather[0].main,
+                            max: vm.forecast[i].temp.max,
+                            min: vm.forecast[i].temp.min
+                        });
+
+                    };
+
+            //             var forecast = [];
+            //             var length = data.data.list.length;
+            //             for (var i = 1; i < length; i++) {
+            //                 forecast.push({
+            //                     date: new Date(data.data.list[i].dt * 1000).toString().split(' ')[0],
+            //                     F: {
+            //                         high: Math.round(data.data.list[i].temp.max),
+            //                         low: Math.round(data.data.list[i].temp.min)
+            //                     },
+            //                     C: {
+            //                         high: Math.round((data.data.list[i].temp.max - 32) * (5 / 9)),
+            //                         low: Math.round((data.data.list[i].temp.min - 32) * (5 / 9))
+            //                     }
+            //                 });
+            //              }
                 })
                 .catch(function() {
                     console.log('Unable to load weather forecast data!');

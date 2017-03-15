@@ -15,11 +15,9 @@
                 <ul>
                     <li>Current City:</li>
                     <li>
-                        <li>
-                            <span ng-hide='current'>Loading...</span>
+                        <li><span ng-hide='current'>Loading...</span>
                         </li>
-                        <li>
-                            <span class='currentcity' ng-show='current'>{{current.city}}</span>
+                        <li><span class='currentcity' ng-show='current'>{{current.city}}</span>
                         </li>
                         <li>
                             <span ng-show='current'><button ng-click='changeLocation(); showme=true'>Change City</button></span>
@@ -50,17 +48,13 @@
         <div>
             <h2>7 Day Forecast:</h2>
             <span ng-hide='forecast'>Loading...</span>
-            <div id='today' ng-show='forecast'><i>Starts with today</i></div>
             <div>
-                <!-- THE FORECAST STARTS WITH THE CURRENT DAY -->
                 <ul class='panel-container'>
-                    <ul ng-show='forecast' ng-repeat='item in forecast'>
-                        Day: {{$index + 1}}
-                        <ul class='panel' ng-repeat='weather in item.weather'>
-                            <li><img ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='weather icon' /><br>{{weather.main}}</li>
-                            <li><span class='min'>{{item.temp.max}}&deg;F</span><br>High</li>
-                            <li><span class='max'>{{item.temp.min}}&deg;F</span><br>Low</li>
-                        </ul>
+                    <ul class='panel' ng-show='forecast' ng-repeat='day in convertedArray'>
+                        <li>{{day.date}}</li>
+                        <li><img ng-src='http://openweathermap.org/img/w/{{day.icon}}.png' alt='weather icon' /><br>{{day.conds}}</li>
+                        <li><span class='min'>{{day.max}}&deg;F</span><br>High</li>
+                        <li><span class='max'>{{day.min}}&deg;F</span><br>Low</li>
                     </ul>
                 </ul>
             </div>
@@ -68,6 +62,7 @@
 
         <script src='node_modules/angular/angular.min.js' charset='utf-8'></script>
         <script src='app/app.js' charset='utf-8'></script>
+
 </body>
 
 </html>

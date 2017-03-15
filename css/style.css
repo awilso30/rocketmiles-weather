@@ -44,7 +44,7 @@ header>li {
     padding: 10px;
 }
 
-.currentcity-container>ul>li, .currentweather-container>ul>li, {
+.currentcity-container>ul>li, .currentweather-container>ul>li {
     margin: 15px;
 }
 
