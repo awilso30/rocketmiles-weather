@@ -2,6 +2,8 @@ angular.module('app', [])
     .controller('weather', ['$scope','$http', function($scope,$http) {
         var vm = $scope;
         vm.location = 'Chicago';
+        vm.OWKEY = 'APPID=4b3ff62e3ed31d05cb44a014d891b7e6'
+        vm.GKEY = '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg'
 
         init();
 
@@ -50,7 +52,7 @@ angular.module('app', [])
         };
 
         function getCurrentWeather() {
-            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
+            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&units=imperial&' + vm.OWKEY)
                 .success(function(response) {
 
                     vm.current = {};
@@ -66,7 +68,7 @@ angular.module('app', [])
         };
 
         function getForecast() {
-            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&APPID=4b3ff62e3ed31d05cb44a014d891b7e6')
+            $http.get('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + vm.coords.trimLatitude + '&lon=' + vm.coords.trimLongitude + '&cnt=7&units=imperial&' + vm.OWKEY)
                 .success(function(response) {
 
                     vm.forecast = response.list;
@@ -77,7 +79,7 @@ angular.module('app', [])
         };
 
         vm.changeLocation = function() {
-            vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + vm.location + '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg';
+            vm.url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + vm.location + vm.GKEY;
 
             getGoogleCoords();
         };
