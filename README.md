@@ -59,10 +59,12 @@ Fix firefox permissions<br>
 -Change the setting for Share Location to allowed
 
 <b>To Do List:</b><br>
+-Do unit tests<br>
 -Add form validation<br>
 -Increase responsiveness<br>
--Take flags off logo and convert to text for responsive logo<br>
 -Make panels wrap with media queries - force certain number of day per row<br>
 -Add change units button - with radial button style<br>
 -Sub out better icons (flat design)<br>
 -Add high and low arrow icons<br>
+-Attempt to use geolocator again(was giving me issues)<br>
+-Host with express or some other server
