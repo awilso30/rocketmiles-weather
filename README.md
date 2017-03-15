@@ -15,11 +15,11 @@ Open index.html in the browser of your choice
 Be sure to disable any adblock or popup blockers as the location api requires this in order to get your location.
 
 <b>Tests</b><br>
-Tests are deprecated after finding a bug late last night.
+Tests are deprecated after needing to shut down githubpages hosted site due to a bug late last night.
 
 <b>To Do List:</b><br>
--Do unit tests<br>
 -Fix e2e tests<br>
+-Do unit tests<br>
 -Add form validation<br>
 -Increase responsiveness<br>
 -Make panels wrap with media queries - force certain number of day per row<br>
