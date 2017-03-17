@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'ArialRoundedMTBold';
+    src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.eot') format('opentype');
+    src: local('ArialRoundedMTBold'), local('ArialRoundedMTBold'), url('../assets/fonts/ArialRoundedMTBold.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #2B2D36;
+    font-family: 'ArialRoundedMTBold', sans-serif;
+}
+
+header {
+    background: #FFFFFF;
+    padding-top: 20px;
+    text-align: center;
+}
+
+header>li {
+    margin: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #2B2D36;
+    font-size: 60px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+}
+
+img {
+    display: inline-block;
+}
+
+.current-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.currentcity-container, .currentweather-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.currentcity-container>ul>li, .currentweather-container>ul>li {
+    margin: 20px;
+}
+
+.currentcity, .currentweather {
+    font-size: 2rem;
+}
+
+.currentconditions {
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.forecast-container {
+    color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+#today {
+    font-size: .7rem;
+    margin: 10px;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.panel {
+    border: 1px solid #D64300;
+    margin: 10px;
+    padding: 20px 30px;
+}
+
+.panel>li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.min {
+    font-size: 1.5rem;
+}
+
+.max {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: 1px solid #2B2D36;
+    border-radius: 5px;
+    height: 25px;
+    width: 80px;
+}
+
+button {
+    font-size: .7rem;
+    padding: 5px;
+    border: 1px solid #D64300;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+button:hover {
+    background: #D64300;
+    color: #FFFFFF
+}
+
+@media (max-width: 1020px) {
+    .flag img {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .panel-container {
+        flex-wrap: wrap;
+    }
+}

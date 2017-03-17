@@ -1,0 +1,29 @@
+{
+    "name": "weather",
+    "version": "1.0.0",
+    "description": "Rocketmiles Weather",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "dependencies": {
+        "angular": "1.5.3",
+        "jasmine": "^2.5.3",
+        "protractor": "^5.1.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "webdriver-manager update && webdriver-manager start",
+        "test": "protractor tests/e2e/weather-conf.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/awilso30/rocketmiles-weather.git"
+    },
+    "author": "Alex Wilson",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/awilso30/rocketmiles-weather/issues"
+    },
+    "homepage": "https://github.com/awilso30/rocketmiles-weather#readme"
+}
