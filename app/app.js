@@ -5,7 +5,6 @@ angular.module('app', [])
         vm.OWKEY = 'APPID=4b3ff62e3ed31d05cb44a014d891b7e6'
         vm.GKEY = '&key=AIzaSyASnirjbcjHxfFlqm4_ZHzvGOQYdsaJEeg'
         vm.coords = {};
-        vm.butts = '';
 
         init();
 
