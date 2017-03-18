@@ -15,7 +15,7 @@ Install dependencies<br>
 Start the server<br>
 <i>npm start</i>
 
-Navigate to localhost:5000
+Navigate to http://localhost:5000
 
 <b>How To run tests:</b><br>
 Tests are located in the tests folder.<br>
@@ -43,7 +43,7 @@ Make sure you enable what tests you'd like to run in rocketmiles-spec.js
 Because the app asks for your location upon load, we could choose to ignore this and load the default location every run or we can setup a workaround through firefox profiles. The tests should work either way, but if you'd like the work around please follow below. If the below doesn't work, you may have to manually click the "Share Location" prompt, which is why I've included lengthy browser.waits to the beforeEach function.
 
 Fix firefox permissions<br>
--Navigate to the site: https://awilso30.github.io/rocketmiles-weather/<br>
+-Navigate to the site: http://localhost:5000<br>
 -Go to the Tools menu in the top taskbar, then select Page Info<br>
 -Select the Permissions tab<br>
 -Change the setting for Share Location to allowed
