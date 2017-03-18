@@ -16,8 +16,6 @@ Start the server<br>
 
 Navigate to localhost:5000
 
-Open index.html in the browser of your choice
-
 <b>How To run tests:</b><br>
 Tests are located in the tests folder.<br>
 <b>Required programs:</b><br>
