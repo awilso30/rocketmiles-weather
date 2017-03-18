@@ -7,12 +7,16 @@ First, I noted all expected output and functionality. Then, I brainstormed ideas
 <b>How to run:</b><br>
 Clone this repo
 
-Cmdline
+Cmdline<br>
+Install dependencies<br>
 <i>npm install</i>
 
-Open index.html in the browser of your choice
+Start the server<br>
+<i>npm start</i>
 
-Be sure to disable any adblock or popup blockers as the location api requires this in order to get your location.
+Navigate to localhost:5000
+
+Open index.html in the browser of your choice
 
 <b>How To run tests:</b><br>
 Tests are located in the tests folder.<br>
@@ -28,26 +32,16 @@ Tests are located in the tests folder.<br>
 
 <b>To Install and Run:</b><br>
 -Download, install and setup Node.js: https://nodejs.org/en/<br>
--Clone or download this repo to the directory of your choice.<br>
 
 <b>To Setup:</b><br>
--Cmdline<br>
--Navigate to where you cloned this repo
+Cmdline<br>
+Navigate to where you cloned this repo
+<i>npm run webdriver</i>
 
-Install all dependencies required for the tests<br>
-<i>npm install</i>
-
-<b>To Run:</b><br>
-Check and mark what tests you'd like to run in rocketmiles-spec.js
-
-Start the test server<br>
-<i>npm start</i>
-
--New cmdline<br>
--Navigate to where you cloned this repo
-
-Run the tests<br>
+New cmdline<br>
 <i>npm test</i>
+
+Make sure you enable what tests you'd like to run in rocketmiles-spec.js
 
 <b>Set Firefox permissions:</b><br>
 Because the app asks for your location upon load, we could choose to ignore this and load the default location every run or we can setup a workaround through firefox profiles. The tests should work either way, but if you'd like the work around please follow below. If the below doesn't work, you may have to manually click the "Share Location" prompt, which is why I've included lengthy browser.waits to the beforeEach function.
