@@ -66,5 +66,3 @@ Fix firefox permissions<br>
 -Add change units button - with radial button style<br>
 -Sub out better icons (flat design)<br>
 -Add high and low arrow icons<br>
--Attempt to use geolocator again(was giving me issues)<br>
--Host with express or some other server

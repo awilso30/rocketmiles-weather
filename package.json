@@ -18,7 +18,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webdriver-manager update && webdriver-manager start",
+    "webdriver": "webdriver-manager update && webdriver-manager start",
     "test": "protractor tests/e2e/weather-conf.js"
   },
   "repository": {
