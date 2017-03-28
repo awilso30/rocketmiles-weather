@@ -1,5 +1,5 @@
-<b><h3>Rocketmiles FE Dev Challenge</h3></b>
-Small web app to present the current weather and a 7 day forecast. If user shares their location, it will pull and present weather based on current location. If user does not share location, app defaults to Rocketmiles HQ.
+<b><h3>Angular Weather</h3></b>
+Small web app to present the current weather and a 7 day forecast. If user shares their location, it will pull and present weather based on current location. If user does not share location, app defaults to Chicago.
 
 <b>Thought Process:</b><br>
 First, I noted all expected output and functionality. Then, I brainstormed ideas on app layout and sketched out ideas. I thought about possible issues, problems and how to work around them. Redesigned and redid sketches. Thought about all the tools that would be absolutely necessary. I resolved to use as few tools as possible and build everything from scratch to maximize load time, performance and cut unnecessary bloat.
@@ -37,7 +37,7 @@ Navigate to where you cloned this repo<br>
 New cmdline<br>
 <i>npm test</i>
 
-Make sure you enable what tests you'd like to run in rocketmiles-spec.js
+Make sure you enable what tests you'd like to run in weather-spec.js
 
 <b>Set Firefox permissions:</b><br>
 Because the app asks for your location upon load, we could choose to ignore this and load the default location every run or we can setup a workaround through firefox profiles. The tests should work either way, but if you'd like the work around please follow below. If the below doesn't work, you may have to manually click the "Share Location" prompt, which is why I've included lengthy browser.waits to the beforeEach function.
